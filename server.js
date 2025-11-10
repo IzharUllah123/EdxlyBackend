@@ -1,8 +1,8 @@
 import http from "http";
 import { WebSocketServer } from "ws";
-import { setupWSConnection } from "y-websocket/dist/bin/utils.cjs"; // use CommonJS build
+import { setupWSConnection } from "y-websocket/bin/utils"; // Fixed import path
 
-const host = process.env.HOST || "0.0.0.0"; // Add this
+const host = process.env.HOST || "0.0.0.0";
 const port = process.env.PORT || 1234;
 
 const server = http.createServer((req, res) => {
@@ -16,6 +16,6 @@ wss.on("connection", (conn, req) => {
   setupWSConnection(conn, req, { gc: true });
 });
 
-server.listen(port, host, () => { // Add host parameter here
+server.listen(port, host, () => {
   console.log(`✅ Yjs WebSocket Server running on ${host}:${port}`);
 });
