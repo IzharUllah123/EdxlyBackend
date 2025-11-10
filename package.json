@@ -1,8 +1,9 @@
 {
   "name": "yjs-server",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node node_modules/y-websocket/bin/server.js 1234"
+    "start": "node server.js"
   },
   "dependencies": {
     "y-websocket": "^1.4.5",
