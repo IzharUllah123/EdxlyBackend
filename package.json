@@ -1,0 +1,13 @@
+{
+  "name": "yjs-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "y-websocket": "^1.5.10",
+    "ws": "^8.18.0"
+  }
+}
