@@ -1,12 +1,12 @@
-import { setupWSConnection } from "y-websocket/bin/utils.js";
-import { WebSocketServer } from "ws";
 import http from "http";
+import { WebSocketServer } from "ws";
+import { setupWSConnection } from "y-websocket/dist/bin/utils.cjs"; // use CommonJS build
 
 const port = process.env.PORT || 1234;
 
 const server = http.createServer((req, res) => {
   res.writeHead(200);
-  res.end("Yjs WebSocket Server is running");
+  res.end("✅ Yjs WebSocket Server is running");
 });
 
 const wss = new WebSocketServer({ server });
