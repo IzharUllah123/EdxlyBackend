@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
-  "dependencies": {
-    "y-websocket": "^1.5.10",
-    "ws": "^8.18.0"
-  }
+ "dependencies": {
+  "y-websocket": "^1.4.5",
+  "ws": "^8.0.0"
+}
+
 }
